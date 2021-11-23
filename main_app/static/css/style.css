@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#logo {
+    height: 64px;
+    width: 64px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    padding-top: 0;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
