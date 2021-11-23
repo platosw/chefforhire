@@ -9,9 +9,6 @@ MEALS = (
     ('D', 'Dinner')
 )
 # Create your models here.
-
-# for Push for Alex
-
 class Chef(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
