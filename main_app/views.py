@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
+from django.views.generic.detail import DetailView
 from .models import Chef
 
 # Create your views here.
@@ -13,3 +14,7 @@ def about(request):
 class ChefsIndex(ListView):
   model = Chef
   template_name = 'chefs/index.html'
+
+class ChefsDetail(DetailView):
+  model = Chef
+  template_name = 'chefs/detail.html'
