@@ -8,9 +8,6 @@ MEALS = (
     ('L', 'Lunch'),
     ('D', 'Dinner')
 )
-# Create your models here.
-
-# for Push for Alex
 
 class Chef(models.Model):
     name = models.CharField(max_length=50)
