@@ -8,7 +8,6 @@ MEALS = (
     ('L', 'Lunch'),
     ('D', 'Dinner')
 )
-# Create your models here.
 
 class Chef(models.Model):
     name = models.CharField(max_length=50)
