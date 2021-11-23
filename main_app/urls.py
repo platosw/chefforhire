@@ -1,4 +1,3 @@
-from django.db import render
 from . import views
 from django.urls import path
 
