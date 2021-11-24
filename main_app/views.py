@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
-from django.views.generic.detail import DetailView
-# from django.views.generic.edit import CreateView, UpdateView
+# from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Chef, User
 from .forms import BookingForm
 
@@ -23,5 +23,16 @@ class ChefsIndex(ListView):
 
 def chef_detail(request, pk):
   chef = Chef.objects.get(id=pk)
-  booking_form = BookingForm()
-  return render(request, 'chef/detail.html', { 'chef': chef, 'booking_form': booking_form })
+  return render(request, 'chef/detail.html', { 'chef': chef })
+
+class ChefsCreate(CreateView):
+  model = Chef
+  fields = '__all__'
+
+class ChefsUpdate(UpdateView):
+  model = Chef
+  fields = '__all__'
+
+class ChefsDelete(DeleteView):
+  model = Chef
+  success_url = '/chefs/'
