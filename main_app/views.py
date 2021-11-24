@@ -25,21 +25,3 @@ def chef_detail (request, pk):
   chef = Chef.objects.all()
   booking_form = BookingForm()
   return render(request, 'chef/detail.html', { 'chef': chef, 'booking_form': booking_form })
-
-
-def add_booking(request, pk):
-  form = BookingForm(request.POST)
-  if form.is_valid():
-    new_booking = form.save(commit=False)
-    new_booking.chef_id = pk
-    new_booking.save()
-
-  return redirect('chef_detail', pk=pk)
-
-class UsersIndex(ListView):
-  model = User
-  template_name = 'users/index.html'
-
-class UsersDetail(DetailView):
-  model = User
-  template_name = 'users/detail.html'
