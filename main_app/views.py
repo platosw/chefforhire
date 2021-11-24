@@ -21,7 +21,7 @@ class ChefsIndex(ListView):
 #   model = Chef
 #   template_name = 'chefs/detail.html'
 
-def chef_detail (request, pk):
+def chef_detail(request, pk):
   chef = Chef.objects.get(id=pk)
   booking_form = BookingForm()
   return render(request, 'chef/detail.html', { 'chef': chef, 'booking_form': booking_form })
