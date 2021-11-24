@@ -1,26 +1,41 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 #logo {
-    height: 64px;
-    width: 64px;
+  height: 64px;
+  width: 64px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 footer {
-    padding-top: 0;
-    text-align: center;
-    justify-content: center;
-    text-align: center;
+  padding-top: 0;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
 }
+
+/* START OF CHEF DETAIL PAGE */
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+/* END OF CHEF DETAIL PAGE */
