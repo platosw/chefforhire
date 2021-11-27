@@ -23,7 +23,12 @@ class ChefsIndex(ListView):
 
 def chef_detail(request, pk):
   chef = Chef.objects.get(id=pk)
-  return render(request, 'chef/detail.html', { 'chef': chef })
+  booking_form = BookingForm()
+  return render(request, 'chef/detail.html', { 
+    'chef': chef,
+  })
+  
+  return redirect('chef_detail', pk=pk)
 
 class ChefsCreate(CreateView):
   model = Chef
@@ -35,4 +40,20 @@ class ChefsUpdate(UpdateView):
 
 class ChefsDelete(DeleteView):
   model = Chef
+  success_url = '/chefs/'
+
+def user_detail(request, pk):
+  user = User.objects.get(id=pk)
+  return render(request, 'user/detail.html', { 'user': user })
+
+class UserCreate(CreateView):
+  model = User
+  fields = '__all__'
+
+class UserUpdate(UpdateView):
+  model = User
+  fields = '__all__'
+
+class UserDelete(DeleteView):
+  model = User
   success_url = '/chefs/'
