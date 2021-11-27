@@ -35,8 +35,8 @@ class User(models.Model):
         return reverse('user_detail', kwargs={'pk': self.id})
 
 class Booking(models.Model):
-    # chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     occassion = models.CharField(max_length=100)
     date = models.DateField('Booking')
     attendees = models.IntegerField()
