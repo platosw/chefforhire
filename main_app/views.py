@@ -24,11 +24,11 @@ class ChefsIndex(ListView):
 def chef_detail(request, pk):
   chef = Chef.objects.get(id=pk)
   booking_form = BookingForm()
-  return render(request, 'chef/detail.html', { 
+  return render(request, 'chefs/detail.html', { 
     'chef': chef,
   })
   
-  return redirect('chef_detail', pk=pk)
+  # return redirect('chef_detail', pk=pk)
 
 class ChefsCreate(CreateView):
   model = Chef
