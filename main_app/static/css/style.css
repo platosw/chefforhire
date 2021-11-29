@@ -1,26 +1,109 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #logo {
-    height: 64px;
-    width: 64px;
+  height: 64px;
+  width: 64px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 footer {
-    padding-top: 0;
-    text-align: center;
-    justify-content: center;
-    text-align: center;
+  padding-top: 0;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
 }
+
+/* START OF CHEF DETAIL PAGE */
+/* .flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-child {
+  flex: 1;
+  border-bottom: 1px solid #888;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+.left {
+  width: 250px;
+  height: 250px;
+} */
+.showcase {
+  width: 80%;
+  height: 420px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  /* border: 1px solid #000; */
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  min-height: 410px;
+}
+
+.chef-profile {
+  width: 15%;
+  height: 250px;
+  float: left;
+}
+
+.chef-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 0.75rem #555);
+}
+
+.info-section {
+  height: 250px;
+  margin-left: 15%;
+  font-size: 1.4375rem;
+}
+
+span {
+  color: hsl(201, 98%, 41%);
+}
+
+.gallery {
+  margin: auto;
+  padding: 25px;
+}
+
+.menu-gallery,
+.testimonial,
+h6 {
+  text-align: center;
+}
+
+.menu-img {
+  width: 350px;
+  height: 250px;
+}
+
+/* END OF CHEF DETAIL PAGE */
