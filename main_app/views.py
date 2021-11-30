@@ -80,7 +80,7 @@ class UserDelete(DeleteView):
   model = User
   success_url = '/chefs/'
 
-@login_required
+# @login_required
 def add_avatar(request, pk):
   avatar_file = request.FILES.get('photo-file', None)
 
@@ -97,7 +97,7 @@ def add_avatar(request, pk):
       print(f'an error occurred uploading to AWS S3')
       print(error)
     
-    return redirect('chef_detail', pk=pk)
+  return redirect('chef_detail', pk=pk)
 
 @login_required
 def add_gallery(request, pk):
