@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h1>Chef's for Hire</h1>
+{% for chef in object_list %}
+<div class="card">
+  <a href="{% url 'chef_detail' chef.id %}">
+    <div class="card-content">
+      <span class="card-title">{{chef.name}}</span>
+      <p>Name: {{chef.name}}</p>
+      <p>Phone: {{chef.phone}}</p>
+      <p>Email: {{chef.email}}</p>
+      <p>Bio: {{chef.bio}}</p>
+      <p>Location: {{chef.location}}</p>
+      <p>Hourly: ${{chef.hourly}}</p>
+    </div>
+  </a>
+</div>
+{% endfor %} {% endblock %}
