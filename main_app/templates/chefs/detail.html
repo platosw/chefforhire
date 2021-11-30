@@ -80,6 +80,10 @@
       </div>
     </div>
   </div>
+  <div class="card-action">
+    <a href="{% url 'chef_update' chef.id %}">Edit</a>
+    <a href="{% url 'chef_delete' chef.id %}">Delete</a>
+  </div>
 </section>
 <section>
   <div class="row">

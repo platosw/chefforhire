@@ -1,20 +1,19 @@
-{% extends 'base.html' %} {% load static %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <div class="container">
-    <div class="landing-info">
-
-        <div class="firstbox">
-            <!-- <img src="{% static 'images/landingpage.jpeg' %}" alt="chef pic"> -->
-        </div>
-        <div class="firstbox">
-            <h3 class="lpheading">Hire a local chef
-                <br />
-                for any occasion.</h3>
-            <a class="lp-cta" href="">Get Started</a>
-        </div>
+  <div class="landing-info">
+    <div class="firstbox">
+      <!-- <img src="{% static 'images/landingpage.jpeg' %}" alt="chef pic"> -->
     </div>
-    <!-- <div class="landing-info">
+    <div class="firstbox">
+      <h3 class="lpheading">
+        Hire a local chef
+        <br />
+        for any occasion.
+      </h3>
+      <a class="lp-cta" href="{% url 'chefs' %}">Get Started</a>
+    </div>
+  </div>
+  <!-- <div class="landing-info">
         <div class="secondbox">Picture Box</div>
         <div class="">
             <h3>See local chefs in your area</h3>
@@ -22,37 +21,36 @@
         </div>
     </div> -->
 
-
-    <h4>Testimonials</h4>
-    <p>See what others have said about Chef for Hire.</p>
-    <div class="row">
-        <div class="col s4">
-            <!-- Promo Content 1 goes here -->
-            <h6>Test</h6>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
-                eveniet? Laboriosam molestiae eligendi voluptas maiores distinctio sequi
-                aliquid temporibus ducimus.
-            </p>
-        </div>
-        <div class="col s4">
-            <!-- Promo Content 2 goes here -->
-            <h6>Test</h6>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius,
-                aspernatur dolore veniam nobis ipsum enim incidunt. Eaque, expedita
-                quisquam.
-            </p>
-        </div>
-        <div class="col s4">
-            <!-- Promo Content 3 goes here -->
-            <h6>Test</h6>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                voluptates cupiditate nemo perferendis perspiciatis praesentium numquam
-                magnam labore. Aliquam, voluptate?
-            </p>
-        </div>
+  <h4>Testimonials</h4>
+  <p>See what others have said about Chef for Hire.</p>
+  <div class="row">
+    <div class="col s4">
+      <!-- Promo Content 1 goes here -->
+      <h6>Test</h6>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
+        eveniet? Laboriosam molestiae eligendi voluptas maiores distinctio sequi
+        aliquid temporibus ducimus.
+      </p>
     </div>
+    <div class="col s4">
+      <!-- Promo Content 2 goes here -->
+      <h6>Test</h6>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius,
+        aspernatur dolore veniam nobis ipsum enim incidunt. Eaque, expedita
+        quisquam.
+      </p>
+    </div>
+    <div class="col s4">
+      <!-- Promo Content 3 goes here -->
+      <h6>Test</h6>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+        voluptates cupiditate nemo perferendis perspiciatis praesentium numquam
+        magnam labore. Aliquam, voluptate?
+      </p>
+    </div>
+  </div>
 </div>
 {% endblock %}
