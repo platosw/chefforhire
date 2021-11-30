@@ -42,7 +42,7 @@ def chef_detail(request, pk):
   })
   # return redirect('chef_detail', pk=pk)
 
-def add_schedule(request, pk):
+def add_booking(request, pk):
   form = BookingForm(request.POST)
   if form.is_valid():
     new_schedule = form.save(commit=False)
