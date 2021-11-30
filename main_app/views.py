@@ -38,9 +38,18 @@ def chef_detail(request, pk):
   booking_form = BookingForm()
   return render(request, 'chefs/detail.html', { 
     'chef': chef,
+    'booking_form': booking_form,
   })
-  
   # return redirect('chef_detail', pk=pk)
+
+def add_schedule(request, pk):
+  form = BookingForm(request.POST)
+  if form.is_valid():
+    new_schedule = form.save(commit=False)
+    new_schedule.chef_id = pk
+    new_schedule.save()
+  
+  return redirect('chef_detail', pk=pk)
 
 
 class ChefsCreate(LoginRequiredMixin, CreateView):
