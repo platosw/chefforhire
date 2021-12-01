@@ -18,6 +18,6 @@ urlpatterns = [
   path('user/<int:pk>/delete', views.UserDelete.as_view(), name='user_delete'),
   path('chefs/<int:pk>/add_booking/', views.add_booking, name='add_booking'),
   path('chefs/<int:pk>/add_avatar/', views.add_avatar, name='add_avatar'),
-  path('chefs/<int:pk>/add_gallery/', views.add_gallery, name='add_gallery'),
+  # path('chefs/<int:pk>/add_gallery/', views.add_gallery, name='add_gallery'),
   path('accounts/signup/', views.signup, name='signup'),
 ]
