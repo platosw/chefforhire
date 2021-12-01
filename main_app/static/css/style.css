@@ -32,6 +32,10 @@ footer {
   width: 100vw;
 }
 
+.left {
+  margin-left: 8px;
+}
+
 /* Landing Page */
 .container {
   min-width: 100vw;
@@ -45,9 +49,9 @@ footer {
 }
 .landing-info {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 
-  /* margin-bottom: 5px; */
+  margin-bottom: 9px;
   background-image: url('../images/landingpage.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,10 +67,11 @@ footer {
   top: 80px;
   left: 270px;
   color: hsl(0, 0%, 100%);
+  text-shadow: 2px 1px 0 #000;
 }
 .lp-cta {
   position: absolute;
-  color: white;
+  color: hsl(0, 0%, 100%);
   background-color: hsl(32, 100%, 49%);
   border-radius: 24px;
   width: 200px;
@@ -82,18 +87,28 @@ footer {
 .landing-about {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 
-  /* margin-bottom: 5px; */
+  margin-bottom: 9px;
+
   background-image: url('../images/dinner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
 
+.together {
+  position: absolute;
+  left: 75rem;
+  top: 100px;
+  font-size: 72px;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 1px 0 #000;
+}
+
 .lp-apply {
   position: absolute;
-  color: white;
+  color: hsl(0, 0%, 100%);
   background-color: hsl(32, 100%, 49%);
   border-radius: 24px;
   width: 200px;
@@ -102,6 +117,28 @@ footer {
   font-size: 22px;
 
   text-align: center;
+}
+
+.chef-cta {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  background-image: url('../images/chef_apply.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.chef-cta-text {
+  position: absolute;
+  top: 120px;
+  left: 75px;
+}
+
+.chef-cta-text h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 72px;
+  text-shadow: 2px 1px 0 #000;
 }
 
 /* End of Landing Page */

@@ -42,19 +42,19 @@
           <ul class="right">
             {% if user.is_authenticated %}
             <li><a href="{% url 'chefs' %}">Chefs</a></li>
-            {% comment %}
+
             <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% endcomment %} {% else %}
-            <li><a href="">SignUp</a></li>
-            <li><a href="">Login</a></li>
+            {% else %}
+            <li><a href="{% url 'signup' %}">SignUp</a></li>
+            <li><a href="{% url 'login' %}">Chef Login</a></li>
             {% endif %}
           </ul>
         </div>
       </nav>
     </header>
     <main>{% block content %} {% endblock %}</main>
-    <footer class="page-footer light-blue darken-2">
-      <div class="right">All Rights Reserved, &copy; 2021 Chef for Hire</div>
+    <footer class="page-footer black">
+      <div class="center">All Rights Reserved, &copy; 2021 Chef for Hire</div>
     </footer>
   </body>
 </html>
