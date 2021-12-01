@@ -82,25 +82,30 @@ class UserDelete(DeleteView):
 
 # @login_required
 def add_avatar(request, pk):
-  avatar_file = request.FILES.get('photo-file', None)
+  try:
+    avatar_file = request.FILES.get('photo-file')
+    print(avatar_file)
+    if avatar_file:
+      s3 = boto3.client('s3')
+      key = uuid.uuid4().hex[:6] + avatar_file.name[avatar_file.name.rfind('.'):]
 
-  if avatar_file:
-    s3 = boto3.client('s3')
-    key = uuid.uuid4().hex[:6] + avatar_file.name[avatar_file.name.rfind('.'):]
-
-    try:
-      s3.upload.fileobj(avatar_file, BUCKET, key)
-      url = f'{S3_BASE_URL}{BUCKET}/{key}'
-      avatar = Avatar(url=url, chef_id=pk)
-      avatar.save()
-    except Exception as error:
-      print(f'an error occurred uploading to AWS S3')
-      print(error)
-    
+      try:
+        s3.upload_fileobj(avatar_file, BUCKET, key)
+        url = f'{S3_BASE_URL}{BUCKET}/{key}'
+        avatar = Avatar(url=url, chef_id=pk)
+        avatar.save()
+        print(avatar)
+      except Exception as error:
+        print(f'an error occurred uploading to AWS S3')
+        print(error)
+    else:
+      print('Can not upload at this time!')
+  except Exception as error:
+    print(error)
   return redirect('chef_detail', pk=pk)
 
-@login_required
-def add_gallery(request, pk):
+# @login_required
+# def add_gallery(request, pk):
   gallery_files = request.FILES.getlist('photo-file', None)
 
   if gallery_files:
