@@ -4,10 +4,24 @@
 <section>
   <div class="showcase">
     <div class="chef-profile">
-      {% comment %} class="col s6" {% endcomment %}
-      <img class="chef-img" src="{{avatar.url}}" alt="{{ chef.name }}" />
+      <!-- {% comment %} class="col s6" {% endcomment %} -->
+      <!-- <img class="chef-img" src="{{photo.url}}" alt="{{ chef.name }}" /> -->
+      <h1>test</h1>
+      {% for photo in avatar %}
+          <img class="responsive-img" src="{{ photo.url }}" alt="{{ chef.name }}" /><br>
+      {% empty %}
+          <div class="card-panel red-text center-align">No Photos</div><br>
+      {% endfor %}
+                
+  
+    <form action="{% url 'add_avatar' chef.id %}" enctype="multipart/form-data" method="post" class="card-panel">
+      {% csrf_token %}
+      <input type="file" name="photo-file" />
+      <br /><br />
+      <input type="submit" class="btn" value="Upload Photo" />
+    </form>
     </div>
-    <form
+    <!-- <form
       action="{% url 'add_avatar' chef.id %}"
       method="post"
       enctype="multipart/form-data"
@@ -16,10 +30,10 @@
       <input class="double-break" type="file" name="avatar_file" />
 
       <input type="submit" value="Upload Photo" />
-    </form>
+    </form> -->
     <div class="info-section">
       {% comment %} col s6 {% endcomment %}
-      <p>{{chef.name}}</p>
+      <p>{{chef.id}}</p>
       <p>{{chef.email}}</p>
       <p>{{chef.location}}</p>
       <p>${{chef.hourly}} <span>per individual</span></p>
