@@ -1,18 +1,22 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Signup</h1>
+<div id="signup" class="card card-content orange-text">
 
-{% if error_message %}
-<p class="red-text">{{error_message}}</p>
-{% endif %}
-<form action="{% url 'signup' %}" method="post">
-  {% csrf_token %} {{form.as_p}}
-  <input class="btn blue" type="submit" value="Sign Up" />
-</form>
-
-<style>
-  ul {
-    visibility: {% if error_message %} visible {% else %} hidden {% endif %};
-  }
-</style>
+  <h1>Signup</h1>
+  
+  {% if error_message %}
+  <p class="red-text">{{error_message}}</p>
+  {% endif %}
+  <form  action="{% url 'signup' %}" method="post">
+    {% csrf_token %} {{form.as_p}}
+    <br>
+    <input class="btn orange" type="submit" value="Sign Up" />
+  </form>
+  
+  <style>
+    ul {
+      visibility: {% if error_message %} visible {% else %} hidden {% endif %};
+    }
+    </style>
+    </div>
 
 {% endblock %}

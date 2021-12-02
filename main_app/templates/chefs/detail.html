@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %} {% comment %}
 <h1>Chef Profile</h1>
 {% endcomment %}
-<section>
+<section class="topsection">
   <div class="showcase">
     <div class="chef-profile">
       <!-- {% comment %} class="col s6" {% endcomment %} -->
@@ -27,7 +27,7 @@
         {% csrf_token %}
         <input type="file" name="photo-file" />
         <br /><br />
-        <input type="submit" class="btn" value="Upload Photo" />
+        <input type="submit" class="btn orange" value="Upload Photo" />
       </form>
     </div>
     <!-- <form
@@ -41,18 +41,61 @@
       <input type="submit" value="Upload Photo" />
     </form> -->
     <div class="info-section">
-      {% comment %} col s6 {% endcomment %}
-      <p>{{chef.id}}</p>
-      <p>{{chef.email}}</p>
-      <p>{{chef.location}}</p>
-      <p>${{chef.hourly}} <span>per individual</span></p>
-      <p>⭐⭐⭐⭐</p>
-      <br />
-      <div class="bio">
-        <p>{{chef.bio}}</p>
+      <div class="detail-card">
+
+        <h5>{{chef.name}}</h5>
+        <p>{{chef.email}}</p>
+        <p>{{chef.location}}</p>
+        <p>${{chef.hourly}} <span>hourly</span></p>
+        <p>⭐⭐⭐⭐</p>
+        <div class="card-action">
+          <a class="btn blue" href="{% url 'chef_update' chef.id %}">Edit Profile</a> 
+          <a class="btn red" href="{% url 'chef_delete' chef.id %}">Delete Profile</a>
+        </div>
+        <br />
+        <div class="bio">
+          <p>{{chef.bio}}</p>
+        </div>
       </div>
-      <button class="btn primary">Schedule</button>
-    </div>
+      <div class="bookingform">
+        <!-- <div class="col s6"> -->
+            <div class="mealform">
+              <form action="{% url 'add_booking' chef.id %}" method="post">
+                {% csrf_token %}
+                {{ booking_form.as_p }}
+                <input class="btn orange" type="submit" value="Add Booking">
+              </form>
+            </div>
+
+            <div class="tableform">
+              <table class="detail-table striped responsive-table">
+                <thead>
+                  <tr>
+                    <th>Host</th>
+                    <th>Occassion</th>
+                    <th>Date</th>
+                    <th>Attendees</th>
+                    <th>Meal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for booking in chef.booking_set.all %}
+                  <tr>
+                    <td>{{ booking.host}}</td>
+                    <td>{{ booking.occassion}}</td>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.attendees }}</td>
+                    <td>{{ booking.get_meal_display }}</td>
+                    
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+        <!-- </div> -->
+         
+        </div>
+      </div>
   </div>
 </section>
 <section>
@@ -109,10 +152,7 @@
       </div>
     </div>
   </div>
-  <div class="card-action">
-    <a href="{% url 'chef_update' chef.id %}">Edit</a>
-    <a href="{% url 'chef_delete' chef.id %}">Delete</a>
-  </div>
+
 </section>
 <section>
   <div class="row">
@@ -146,4 +186,17 @@
     </div>
   </div>
 </section>
+<script>
+  const dateEl = document.getElementById('id_date');
+  const selectEl = document.getElementById('id_meal');
+
+  M.Datepicker.init(dateEl, {
+      format: 'yyyy-mm-dd',
+      defaultDate: new Date(),
+      setDefaultDate: true,
+      autoClose: true
+  });
+
+  M.FormSelect.init(selectEl);
+</script>
 {% endblock %}

@@ -52,12 +52,19 @@ class Gallery(models.Model):
 
 class Booking(models.Model):
     chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    host = models.CharField(max_length=30)
     occassion = models.CharField(max_length=100)
-    date = models.DateField('Booking')
+    date = models.DateField('Date')
     attendees = models.IntegerField()
     meal = models.CharField(
         max_length=1,
         choices=MEALS,
         default=MEALS[0][0]
     )
+   
+
+    def __str__(self):
+        return f'{self.get_meal_display()} on {self.date}'
+
+    class Meta:
+        ordering = ('-date',)
