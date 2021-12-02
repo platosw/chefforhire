@@ -41,17 +41,20 @@
       <input type="submit" value="Upload Photo" />
     </form> -->
     <div class="info-section">
-      {% comment %} col s6 {% endcomment %}
-      <p>{{chef.id}}</p>
+      <p>{{chef.name}}</p>
       <p>{{chef.email}}</p>
       <p>{{chef.location}}</p>
-      <p>${{chef.hourly}} <span>per individual</span></p>
+      <p>${{chef.hourly}} <span>hourly</span></p>
       <p>⭐⭐⭐⭐</p>
+      <div class="card-action">
+        <a class="btn blue" href="{% url 'chef_update' chef.id %}">Edit Profile</a> 
+        <a class="btn red" href="{% url 'chef_delete' chef.id %}">Delete Profile</a>
+      </div>
       <br />
       <div class="bio">
         <p>{{chef.bio}}</p>
+        <button class="btn primary">Schedule</button>
       </div>
-      <button class="btn primary">Schedule</button>
     </div>
   </div>
 </section>
@@ -109,10 +112,7 @@
       </div>
     </div>
   </div>
-  <div class="card-action">
-    <a href="{% url 'chef_update' chef.id %}">Edit</a>
-    <a href="{% url 'chef_delete' chef.id %}">Delete</a>
-  </div>
+
 </section>
 <section>
   <div class="row">

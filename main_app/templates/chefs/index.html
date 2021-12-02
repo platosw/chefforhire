@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<h1>Chef's for Hire</h1>
+<h1 class="indexhead" >Chef's for Hire</h1>
 {% for chef in object_list %}
-<div class="card">
+<div id="chefindex" class="card">
   {% comment %}
   <a href="{% url 'chef_detail' chef.id %}">
     {% endcomment %}
@@ -13,10 +13,8 @@
       <p>Bio: {{chef.bio}}</p>
       <p>Location: {{chef.location}}</p>
       <p>Hourly: ${{chef.hourly}}</p>
+      <a id="" class="view-profile btn blue" href="{% url 'chef_detail' chef.id %}">View Profile</a>
     </div>
-    <a class="view-profile" href="{% url 'chef_detail' chef.id %}"
-      >View Profile</a
-    >
     {% comment %}
   </a>
   {% endcomment %}

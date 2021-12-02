@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
 }
+p, a, span, button {
+  font-family: 'Lato', sans-serif;
+}
+
 
 #logo {
   height: 64px;
@@ -30,8 +34,11 @@ footer {
 
 .nav-bar-fixed {
   width: 100vw;
+  font-family: 'Roboto', sans-serif;
 }
-
+.right a {
+font-size: 1.375rem;
+}
 .left {
   margin-left: 8px;
 }
@@ -46,6 +53,9 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
 }
 .landing-info {
   width: 100vw;
@@ -78,7 +88,7 @@ footer {
   height: 50px;
   padding: 9px 25px;
   font-size: 22px;
-
+  font-family: 'Lato', sans-serif;
   text-align: center;
   top: 300px;
   left: 270px;
@@ -115,6 +125,7 @@ footer {
   height: 50px;
   padding: 9px 25px;
   font-size: 22px;
+  font-family: 'Lato', sans-serif;
 
   text-align: center;
 }
@@ -144,6 +155,10 @@ footer {
 /* End of Landing Page */
 
 /* START OF CHEF DETAIL PAGE */
+/* section {
+  width: 100vw;
+  height: 80vh;
+} */
 
 .showcase {
   width: 100%;
@@ -166,22 +181,31 @@ footer {
 }
 
 .chef-profile {
-  width: 15%;
-  height: 250px;
-  float: left;
+  width: 17%;
+  height: 384px;
+  margin-left: 15px;
+ 
 }
 
-.chef-img {
+.responsive-img {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  filter: drop-shadow(0 0 0.75rem #555);
+  filter: drop-shadow(0 0 0.3rem #555);
+}
+.card-panel {
+  margin-bottom: 100px;
 }
 
 .info-section {
-  height: 250px;
-  margin-left: 15%;
+  height: 25.5rem;
+  margin-left: 8%;
+  padding: 8px 8px;
   font-size: 1.4375rem;
+  border: 1px solid black;
+  border: none;
+  box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+  
 }
 
 span {
@@ -209,6 +233,24 @@ h6 {
 .double-break {
   margin-bottom: 2em;
 }
+
+
+/* INDEX PAGE */
+
+.card-content {
+  border: 1px solid black;
+  border: none;
+  box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+#chefindex {
+  width: 70%;
+  margin: auto;
+}
+.indexhead {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
 
 /* input[type='submit'] {
   padding: 0.4em 1em;
