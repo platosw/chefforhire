@@ -50,11 +50,11 @@ put some images
 
 | Component                                  | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| Create React app / Structure(Architecture) |    H     |      4hrs      |     6hrs      |    6hrs     |
-| Back-end: CRUD                             |    H     |      6hrs      |     12hrs     |    12hrs    |
+| Structure(Architecture)                    |    H     |      1hrs      |     6hrs      |    6hrs     |
+| Back-end: CRUD                             |    H     |      6hrs      |     12hrs     |    14hrs    |
 | Authentication                             |    H     |    0.5hrs      |     4hrs      |    4hrs     |
 | Front-end: Screens                         |    H     |      8hrs      |     10hrs     |    10hrs    |
-| Deployment                                 |    H     |      3hrs      |     2hrs      |    2hrs     |
+| Deployment                                 |    H     |      3hrs      |     2hrs      |    3hrs     |
 | CSS                                        |    H     |     48hrs      |     50hrs     |    50hrs    |
 | Post-MVP.                                  |    H     |     20hrs      |     19hrs     |    19hrs    |
-| Total                                      |    H     |     78hrs      |     44hrs     |   106hrs    |
+| Total                                      |    H     |     86.5hrs    |     103hrs    |   106hrs    |
