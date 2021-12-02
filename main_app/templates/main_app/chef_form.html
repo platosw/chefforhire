@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<div id="chefcreate" class="card card-content blue-text">
+
 {% if object %}
     <h1>Update {{ object.name }}'s Information</h1>
 {% else %}
-    <h1>Add New Private Chef</h1>
+    <h1>Private Chef Sign Up</h1>  
 {% endif %}
 
 <form action="" method="post">
@@ -12,7 +15,8 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input type="submit" value="{% if object %} Update Chef {% else %} Add New Chef {% endif %}">
+    <input class="btn blue" type="submit" value="{% if object %} Update Chef {% else %} Add New Chef {% endif %}">
 
 </form>
+</div>
 {% endblock %}
