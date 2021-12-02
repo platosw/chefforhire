@@ -51,8 +51,6 @@ class Gallery(models.Model):
         return f'Photo for chef_id: {self.chef_id} @{self.url}'
 
 class Booking(models.Model):
-    chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     occassion = models.CharField(max_length=100)
     date = models.DateField('Booking')
     attendees = models.IntegerField()
