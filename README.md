@@ -12,6 +12,10 @@ Alex of Tyrone!! please write some here! lol
 
 **Make precious memory!**
 
+## Technologies
+
+ahahahahahahahahahah!!!!!
+
 ## Entity Relational Diagram (ERD)
 
 Put a screen shot
