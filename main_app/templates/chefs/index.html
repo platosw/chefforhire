@@ -6,14 +6,15 @@
   <a href="{% url 'chef_detail' chef.id %}">
     {% endcomment %}
     <div class="card-content">
-      <span class="card-title">{{chef.name}}</span>
-      <p>Name: {{chef.name}}</p>
+      <span class="card-title orange-text">{{chef.name}}</span>
+    
       <p>Phone: {{chef.phone}}</p>
       <p>Email: {{chef.email}}</p>
       <p>Bio: {{chef.bio}}</p>
       <p>Location: {{chef.location}}</p>
       <p>Hourly: ${{chef.hourly}}</p>
-      <a id="" class="view-profile btn blue" href="{% url 'chef_detail' chef.id %}">View Profile</a>
+      <br>
+      <a id="" class="view-profile btn orange" href="{% url 'chef_detail' chef.id %}">View Profile</a>
     </div>
     {% comment %}
   </a>

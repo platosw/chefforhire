@@ -19,6 +19,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
 
@@ -29,7 +32,7 @@
           <ul>
             <!-- <li><i style="color: white;" class="fas fa-utensils"></i></li> -->
             <li>
-              <a class="left brand-logo" href="{% url 'landing' %}"
+              <a class="left brand-logo" id="brand" href="{% url 'landing' %}"
                 >Chef for Hire</a
               >
             </li>
@@ -42,10 +45,11 @@
           <ul class="right">
             {% if user.is_authenticated %}
             <li><a href="{% url 'chefs' %}">Chefs</a></li>
-
+            <li><a href="{% url 'chef_create' %}">Create Chef Profile</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
+
             {% else %}
-            <li><a href="{% url 'signup' %}">SignUp</a></li>
+            <li><a href="{% url 'signup' %}">Chef Sign Up</a></li>
             <li><a href="{% url 'login' %}">Chef Login</a></li>
             {% endif %}
           </ul>
@@ -53,7 +57,7 @@
       </nav>
     </header>
     <main>{% block content %} {% endblock %}</main>
-    <footer class="page-footer black">
+    <footer class="page-footer black orange-text darken-3">
       <div class="center">All Rights Reserved, &copy; 2021 Chef for Hire</div>
     </footer>
   </body>

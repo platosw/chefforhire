@@ -7,7 +7,6 @@ p, a, span, button {
   font-family: 'Lato', sans-serif;
 }
 
-
 #logo {
   height: 64px;
   width: 64px;
@@ -30,25 +29,34 @@ footer {
   text-align: center;
   justify-content: center;
   text-align: center;
+  color: hsl(32, 100%, 49%);
 }
 
 .nav-bar-fixed {
   width: 100vw;
   font-family: 'Roboto', sans-serif;
+  color: hsl(32, 100%, 49%);
 }
 .right a {
-font-size: 1.375rem;
+  font-weight: 400;
+  font-size: 1.375rem;
+  color: hsl(32, 100%, 49%);
+}
+#brand {
+  color: hsl(32, 100%, 49%);
 }
 .left {
   margin-left: 8px;
+  color: hsl(32, 100%, 49%);
 }
+
+
 
 /* Landing Page */
 .container {
   min-width: 100vw;
   height: 100%;
   display: flex;
-  /* flex-grow: 1; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -241,14 +249,28 @@ h6 {
   border: 1px solid black;
   border: none;
   box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
 }
 #chefindex {
   width: 70%;
   margin: auto;
+  border-radius: 7px;
+  
 }
 .indexhead {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+}
+
+/* END OF INDEX PAGE */
+
+/* SIGNUP PAGE */
+
+
+#signup, #login, #chefcreate {
+  margin: 60px auto; 
+  width: 70%;
+  padding: 10px;
 }
 
 
