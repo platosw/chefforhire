@@ -11,7 +11,7 @@
       <img
         class="responsive-img"
         src="{{ photo.url }}"
-        alt="{{ chef.name }}"
+        alt="{{chef.name}}"
       /><br />
       {% empty %}
       <div class="card-panel red-text center-align">No Photos</div>
@@ -42,15 +42,18 @@
     </form> -->
     <div class="info-section">
       <div class="detail-card">
-
         <h5>{{chef.name}}</h5>
         <p>{{chef.email}}</p>
         <p>{{chef.location}}</p>
         <p>${{chef.hourly}} <span>hourly</span></p>
         <p>⭐⭐⭐⭐</p>
         <div class="card-action">
-          <a class="btn blue" href="{% url 'chef_update' chef.id %}">Edit Profile</a> 
-          <a class="btn red" href="{% url 'chef_delete' chef.id %}">Delete Profile</a>
+          <a class="btn blue" href="{% url 'chef_update' chef.id %}"
+            >Edit Profile</a
+          >
+          <a class="btn red" href="{% url 'chef_delete' chef.id %}"
+            >Delete Profile</a
+          >
         </div>
         <br />
         <div class="bio">
@@ -59,43 +62,40 @@
       </div>
       <div class="bookingform">
         <!-- <div class="col s6"> -->
-            <div class="mealform">
-              <form action="{% url 'add_booking' chef.id %}" method="post">
-                {% csrf_token %}
-                {{ booking_form.as_p }}
-                <input class="btn orange" type="submit" value="Add Booking">
-              </form>
-            </div>
-
-            <div class="tableform">
-              <table class="detail-table striped responsive-table">
-                <thead>
-                  <tr>
-                    <th>Host</th>
-                    <th>Occassion</th>
-                    <th>Date</th>
-                    <th>Attendees</th>
-                    <th>Meal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for booking in chef.booking_set.all %}
-                  <tr>
-                    <td>{{ booking.host}}</td>
-                    <td>{{ booking.occassion}}</td>
-                    <td>{{ booking.date }}</td>
-                    <td>{{ booking.attendees }}</td>
-                    <td>{{ booking.get_meal_display }}</td>
-                    
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
-        <!-- </div> -->
-         
+        <div class="mealform">
+          <form action="{% url 'add_booking' chef.id %}" method="post">
+            {% csrf_token %} {{ booking_form.as_p }}
+            <input class="btn orange" type="submit" value="Add Booking" />
+          </form>
         </div>
+
+        <div class="tableform">
+          <table class="detail-table striped responsive-table">
+            <thead>
+              <tr>
+                <th>Host</th>
+                <th>Occassion</th>
+                <th>Date</th>
+                <th>Attendees</th>
+                <th>Meal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for booking in chef.booking_set.all %}
+              <tr>
+                <td>{{ booking.host}}</td>
+                <td>{{ booking.occassion}}</td>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.attendees }}</td>
+                <td>{{ booking.get_meal_display }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <!-- </div> -->
       </div>
+    </div>
   </div>
 </section>
 <section>
@@ -152,7 +152,6 @@
       </div>
     </div>
   </div>
-
 </section>
 <section>
   <div class="row">
@@ -191,10 +190,10 @@
   const selectEl = document.getElementById('id_meal');
 
   M.Datepicker.init(dateEl, {
-      format: 'yyyy-mm-dd',
-      defaultDate: new Date(),
-      setDefaultDate: true,
-      autoClose: true
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true,
   });
 
   M.FormSelect.init(selectEl);
