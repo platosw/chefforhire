@@ -1,0 +1,317 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+p,
+a,
+span,
+button {
+  font-family: 'Lato', sans-serif;
+}
+
+#logo {
+  height: 64px;
+  width: 64px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  flex-grow: 1;
+  width: 100vw;
+}
+
+footer {
+  padding-top: 0;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  color: hsl(32, 100%, 49%);
+}
+
+.nav-bar-fixed {
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
+  color: hsl(32, 100%, 49%);
+}
+.right a {
+  font-weight: 400;
+  font-size: 1.375rem;
+  color: hsl(32, 100%, 49%);
+}
+#brand {
+  color: hsl(32, 100%, 49%);
+}
+.left {
+  margin-left: 8px;
+  color: hsl(32, 100%, 49%);
+}
+
+/* Landing Page */
+.container {
+  min-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+.landing-info {
+  width: 100vw;
+  height: 80vh;
+
+  margin-bottom: 9px;
+  background-image: url('../images/landingpage.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.firstbox {
+  margin: 20px;
+  position: relative;
+}
+.lpheading {
+  position: absolute;
+  font-size: 72px;
+  top: 80px;
+  left: 270px;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 1px 0 #000;
+}
+.lp-cta {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(32, 100%, 49%);
+  border-radius: 24px;
+  width: 200px;
+  height: 50px;
+  padding: 9px 25px;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  top: 300px;
+  left: 270px;
+}
+
+.landing-about {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+
+  margin-bottom: 9px;
+
+  background-image: url('../images/dinner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.together {
+  position: absolute;
+  left: 75rem;
+  top: 100px;
+  font-size: 72px;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 1px 0 #000;
+}
+
+.lp-apply {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(32, 100%, 49%);
+  border-radius: 24px;
+  width: 200px;
+  height: 50px;
+  padding: 9px 25px;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+
+  text-align: center;
+}
+
+.chef-cta {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  background-image: url('../images/chef_apply.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.chef-cta-text {
+  position: absolute;
+  top: 120px;
+  left: 75px;
+}
+
+.chef-cta-text h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 72px;
+  text-shadow: 2px 1px 0 #000;
+}
+
+/* End of Landing Page */
+
+/* START OF CHEF DETAIL PAGE */
+/* section {
+  width: 100vw;
+  height: 80vh;
+} */
+
+.showcase {
+  width: 100%;
+  height: 420px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  min-height: 410px;
+}
+
+.chef-profile {
+  width: 17%;
+  height: 384px;
+  margin-left: 15px;
+}
+
+.responsive-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 0.3rem #555);
+}
+.card-panel {
+  margin-bottom: 100px;
+}
+.topsection {
+  height: 500px;
+  margin-top: 20px;
+}
+.info-section {
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  margin-left: 2%;
+  padding: 8px 8px;
+  font-size: 1rem;
+  border: 1px solid black;
+  border: none;
+  box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.tableform {
+  overflow: auto;
+  margin-right: 50px;
+}
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+}
+.bookingform {
+  display: flex;
+  width: 73%;
+
+  /* justify-content: flex-start; */
+  /* background-color: red; */
+}
+.mealform {
+  display: flex;
+  height: 90%;
+  flex-direction: row;
+  flex: 1fr 1fr;
+  /* width: 50%; */
+}
+.tableform {
+  display: flex;
+  margin-left: 20px;
+  /* width: 50%; */
+}
+span {
+  color: hsl(32, 100%, 49%);
+}
+.bio {
+  width: 80%;
+}
+.gallery {
+  margin: auto;
+  padding: 25px;
+}
+
+.menu-gallery,
+.testimonial,
+h6 {
+  text-align: center;
+}
+
+.menu-img {
+  width: 350px;
+  height: 250px;
+}
+
+/* END OF CHEF DETAIL PAGE */
+
+.double-break {
+  margin-bottom: 2em;
+}
+
+/* INDEX PAGE */
+
+.card-content {
+  border: 1px solid black;
+  border: none;
+  box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+#chefindex {
+  width: 50%;
+  margin: auto;
+  border-radius: 7px;
+}
+.indexhead {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* END OF INDEX PAGE */
+
+/* SIGNUP PAGE */
+
+#signup,
+#login,
+#chefcreate {
+  margin: 60px auto;
+  width: 70%;
+  padding: 10px;
+}
+
+/* input[type='submit'] {
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.45), 0 3px 6px 0 rgba(0, 0, 0, 0.45);
+  background-color: rgb(37, 49, 80);
+  color: white;
+  font-family: sans-serif;
+} */
