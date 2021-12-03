@@ -4,25 +4,37 @@
 
 ## Project Name
 
-Chef for Hire 🥘
+# Chef for Hire 🥘
 
 ## Project Description
 
-Alex of Tyrone!! please write some here! lol
+An app that allows clients to hire private chefs in their local area for various occassions. This app can be for birthday parties, anniversaries, weddings, or a simple date night for two. 
 
 **Make precious memory!**
 
 ## Technologies
 
-ahahahahahahahahahah!!!!!
+- Django
+- PostgreSQL
+- Python 
+- AWS S3
+- Materialize 
+- HTML 
+- CSS
+- JavaScript
 
-## Entity Relational Diagram (ERD)
+## Trello Board
 
-Put a screen shot
+[Click here to view Trello Board](https://trello.com/b/0vA1NKV9/chef-for-hire)
+
+
 
 ## Screen Shots
 
-put some images
+## <img src="main_app/static/images/mainpage.jpeg">
+## <img src="main_app/static/images/mainpage2.jpeg">
+## <img src="main_app/static/images/mainpage3.jpeg">
+## <img src="main_app/static/images/detail.jpeg">
 
 ### MVP/PostMVP
 
@@ -48,7 +60,7 @@ put some images
 | November  29 | CRUD - Full Stack                                                       | Complete   |
 | November  30 | Debugging, MVP                                                          | Complete   |
 | December  01 | Debugging, Post MVP, Deployment                                         | Complete   |
-| December  02 | Presentations                                                           | Complete   |
+| December  03 | Presentations                                                           | Complete   |
 
 ## Timeframes
 
