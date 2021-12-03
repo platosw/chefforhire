@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
 }
-p, a, span, button {
+p,
+a,
+span,
+button {
   font-family: 'Lato', sans-serif;
 }
 
@@ -49,8 +52,6 @@ footer {
   margin-left: 8px;
   color: hsl(32, 100%, 49%);
 }
-
-
 
 /* Landing Page */
 .container {
@@ -192,7 +193,6 @@ h3 {
   width: 17%;
   height: 384px;
   margin-left: 15px;
- 
 }
 
 .responsive-img {
@@ -218,18 +218,15 @@ h3 {
   border: 1px solid black;
   border: none;
   box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-  
 }
 .tableform {
   overflow: auto;
   margin-right: 50px;
-  
 }
 .detail-card {
   display: flex;
   flex-direction: column;
   width: 27%;
-  
 }
 .bookingform {
   display: flex;
@@ -239,19 +236,19 @@ h3 {
   /* background-color: red; */
 }
 .mealform {
-display: flex;
-height: 90%;
-flex-direction: row;
-flex: 1fr 1fr;
-/* width: 50%; */
+  display: flex;
+  height: 90%;
+  flex-direction: row;
+  flex: 1fr 1fr;
+  /* width: 50%; */
 }
 .tableform {
-display: flex;
-margin-left: 20px;
-/* width: 50%; */
+  display: flex;
+  margin-left: 20px;
+  /* width: 50%; */
 }
 span {
-  color:  hsl(32, 100%, 49%);
+  color: hsl(32, 100%, 49%);
 }
 .bio {
   width: 80%;
@@ -278,7 +275,6 @@ h6 {
   margin-bottom: 2em;
 }
 
-
 /* INDEX PAGE */
 
 .card-content {
@@ -286,12 +282,12 @@ h6 {
   border: none;
   box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.3);
   border-radius: 7px;
+  margin-bottom: 15px;
 }
 #chefindex {
-  width: 70%;
+  width: 50%;
   margin: auto;
   border-radius: 7px;
-  
 }
 .indexhead {
   text-align: center;
@@ -302,13 +298,13 @@ h6 {
 
 /* SIGNUP PAGE */
 
-
-#signup, #login, #chefcreate {
-  margin: 60px auto; 
+#signup,
+#login,
+#chefcreate {
+  margin: 60px auto;
   width: 70%;
   padding: 10px;
 }
-
 
 /* input[type='submit'] {
   padding: 0.4em 1em;
